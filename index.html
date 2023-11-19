@@ -68,7 +68,8 @@
     var link = (params.to.startsWith('http'))? params.to : '//'+params.to;
  
     // open defined link in a new tab
-    window.open(link, '_blank');
+    let newTab = window.open();
+    newTab.location.href = link;
 
     // Show user external link incase of popup block
     let browser_active = ((typeof document.hasFocus != 'undefined' ? document.hasFocus() : 1) ? 1 : 0);
