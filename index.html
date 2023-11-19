@@ -69,6 +69,7 @@
  
     // open defined link in a new tab
     window.open(link, '_blank');
+    history.back();
 
     // Show user external link incase of popup block
     let browser_active = ((typeof document.hasFocus != 'undefined' ? document.hasFocus() : 1) ? 1 : 0);
